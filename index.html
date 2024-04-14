@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARNIVAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css" integrity="sha512-za6IYQz7tR0pzniM/EAkgjV1gf1kWMlVJHBHavKIvsNoUMKWU99ZHzvL6lIobjiE2yKDAKMDSSmcMAxoiWgoWA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js" integrity="sha512-EC3CQ+2OkM+ZKsM1dbFAB6OGEPKRxi6EDRnZW9ys8LghQRAq6cXPUgXCCujmDrXdodGXX9bqaaCRtwj4h4wgSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div>
+        <img src="./output.png" style="opacity: 0;"></img>
+    </div>
+    <style>
+        html {
+            background-color: black;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        const viewer = new Viewer(document.querySelector('img'), {
+            inline: true,
+            viewed() {
+                viewer.zoomTo(0.1);
+            },
+            navbar: false,
+            toolbar: false,
+            backdrop: false,
+        });
+
+        viewer.show();
+    </script>
+</body>
+</html>
